@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: manjunathmetiarchpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manjunathmetiarchpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: manjunathmetiarchpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: manjunathmetiarchpipelinesjavascriptdocker 
+          image: mycontainerregistry901232.azurecr.io/manjunathmetiarchpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
